@@ -1,0 +1,25 @@
+Source: python-pandocfilters
+Section: python
+Priority: optional
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Sebastian Humenda <shumenda@gmx.de>
+Build-Depends: debhelper-compat (= 12), python3-all (>= 2.7), dh-python
+Standards-Version: 4.5.0
+Homepage: https://pypi.python.org/pypi/pandocfilters/
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-pandocfilters.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-pandocfilters
+
+
+Package: python3-pandocfilters
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Recommends: pandoc (>= 1.16~)
+Description: python3 bindings for Pandoc's filters
+ Pandoc is a powerful utility to transform various input formats into a wide
+ range of output formats. To alter the exported output document, Pandoc allows
+ the usage of filters, which are pipes that read a JSON serialization of the
+ Pandoc AST from stdin, transform it in some way, and write it to stdout. It
+ allows therefore to alter the processing of Pandoc's supported input formats,
+ for instance one can add new syntax elements to markdown, etc.
+ .
+ This package provides Python3 bindings.
